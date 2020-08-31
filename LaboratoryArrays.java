@@ -1,14 +1,8 @@
 package Laboratory_Work;
 
-
-
 public class LaboratoryArrays {
-
-	
-
-	// № 1 Создать массив из чётных чисел от 2 до 20.
+	// task № 1 Create an array of even numbers from 2 to 20.
 	int[] taskArrayOne() {
-
 		int[] array = new int[10];
 		int temp = 2;
 
@@ -17,14 +11,11 @@ public class LaboratoryArrays {
 			temp += 2;
 			System.out.println(array[i]);
 		}
+
 		return array;
 	}
-
-
-	// № 2  Массив от 1 до 99 нечётн. Вывести на экран, затем в обратном направлении.
-
+	//task № 2 Create an array from 1 to 99 odd. Display it on the screen, then in the opposite direction.
 	int[] taskArrayTwo() {
-
 		int[] array = new int[50];
 		int count = 1;
 
@@ -36,14 +27,11 @@ public class LaboratoryArrays {
 		for(int i = array.length - 1; i >= 0; i--) {
 			System.out.println(array[i]);
 		}
+
 		return array;
 	}
-
-
-	// №3 Массив из 15 случайных чисел от 0 - 9. Подсчитать количество чётных элементов.
-
+	//task №3 Create an array of 15 random numbers from 0 to 9. Count the number of even elements.
 	int[] taskArrayThree() {
-
 		int evenElements = 0;
 		int[] array = new int[15];
 
@@ -55,13 +43,11 @@ public class LaboratoryArrays {
 			System.out.println(array[i]);
 		}
 		System.out.println("Количество чётных элементов " + evenElements);
+
 		return array;
 	}
-
-	//№4 Массив из 8 чисел от 1 до 10. Заменить каждый элемент с нечётным индексом на 0.
-
+	//task №4 Create an array of 8 numbers from 1 to 10. Replace each element with an odd index with 0.
 	int[] taskArrayFour() {
-
 		int[] array = new int[8];
 
 		System.out.println("До замены элементов по индексу:");
@@ -76,13 +62,12 @@ public class LaboratoryArrays {
 			}
 			System.out.println(array[i]);
 		}
+
 		return array;
 	}
-
-	//№5 Два массива из 5 случайных чисел (0 -5). Вывести оба. Посчитать сумму. Сравнить сумму обоих массив и указать в котором больше.
-
+	//task №5 Create two arrays of 5 random numbers (0 -5). 
+	//Print both. Calculate the amount. Compare the sum of both arrays and specify which one is larger.
 	void taskArrayFive() {
-
 		int[] firstArray = new int[5];
 		int[] secondArray = new int[firstArray.length];
 		int sumFirstArray = 0;
@@ -105,11 +90,8 @@ public class LaboratoryArrays {
 			System.out.println("Сумма элементов во втором массиве больше чем в первом");
 		}
 	}
-
-	// №6 Создать массив из 4 случайных чисел от 1 до 99. Определить возрастает ли массив.
-
+	//task №6 Create an array of 4 random numbers from 1 to 99. Define an object or array.
 	int[] taskArraySix() {
-
 		int[] array = new int[4];
 		boolean flag = true;
 
@@ -129,13 +111,12 @@ public class LaboratoryArrays {
 		else {
 			System.out.println("Массив не возрастает");
 		}
+
 		return array;
 	}
-
-	// №7 Создать массив фибоначи до 20. 
+	//task №7 Create a Fibonacci array up to 20. 
 	//  1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 	int getFibanachi() {
-
 		int firstNomber = 1;
 		int secondNomber = 1;
 		int result = 0;
@@ -147,13 +128,11 @@ public class LaboratoryArrays {
 			firstNomber = secondNomber;
 			secondNomber = result;
 		}
+
 		return result;
 	}
-
-	// №8 Создать массив из 12 элементов ( -15 - 15) . Определить максимальный элемент в массиве. Сообщить его индекс.
-
+	//task №8 Create an array of 12 elements (-15 - 15) . Determine the maximum element in the array. Report its index.
 	int[] taskArrayEight() {
-
 		int[] array = new int[12];
 		int index = 0;
 
@@ -170,13 +149,11 @@ public class LaboratoryArrays {
 		}
 		System.out.println("Максимальный элемент в массиве: " + maxElem);
 		System.out.println("Индекс элемента: " + index);
+
 		return array;
 	}
-
-	// №9 Создать массив из 11 элементов ( -1 - 1) . Определить какой элемент встречается чаще всего.
-
+	//task №9 Create an array of 11 elements (-1 - 1) . Determine which element is most common.
 	int[] taskArrayNine() {
-
 		int countZero = 0;
 		int[] array = new int[11];
 
@@ -188,14 +165,12 @@ public class LaboratoryArrays {
 			System.out.println(array[i]);
 		}
 		System.out.println("Минус один в массиве встречается:" + countZero + " раза");
+
 		return array;
 	}
-
-
-	// №10 Создать массив из 10 элементов ( - 5 - 5) . Массив разделить на две половины. Посчитать сумму каждой половины и определить какая половина больше.
-
+	//task №10 Create an array of 10 elements (- 5 - 5) .
+	//Divide the array into two halves.Calculate the sum of each half and determine which half is larger.
 	int[] taskArrayTen() {
-
 		int[] array = new int[10];
 		int firstHalf = 0;
 		int secondHalf = 0;
@@ -223,12 +198,12 @@ public class LaboratoryArrays {
 		else {
 			System.out.println("Второй массив больше первого");
 		}
+
 		return array;
 	}
-	// №11 --------- Многомерные массивы -------------
-	//№1 Создать 2-мерный массив из 8 строк и 5 столбцов.Заполнить случайными числами от 10 до 99.
+	// №11 --------- Multidimensional array -------------
+	//task №1 Create a 2-dimensional array of 8 rows and 5 columns. Fill in with random numbers from 10 to 99.
 	int[][] taskGetMultiArrayOne() {
-
 		int[][] multiArray = new int[8][5];
 
 		for(int i = 0; i < multiArray.length; i++) {
@@ -238,11 +213,11 @@ public class LaboratoryArrays {
 			}
 			System.out.println();
 		}
+
 		return multiArray;
 	}
-	//№2 Создать 2-мерный массив из 5 строк по 8 столбцов. Заполнить от -99 до 99. Вывести максимальное значение.
+	//task №2 Create a 2-dimensional array of 5 rows of 8 columns. Fill in from -99 to 99. Print the maximum value.
 	int[][] taskGetMultiArrayTwo(){
-
 		int[][] multiArray = new int[5][8];
 		int maxElement = 0;
 		String index = "";
@@ -259,11 +234,12 @@ public class LaboratoryArrays {
 		}
 		System.out.println("Индекс элемента:" + index);
 		System.out.println("Максимальный элемент: " + maxElement);
+
 		return multiArray;
 	}
-	//№3 Создать 2-мерный массив из 7 строк и 4 столбцов. Заполнить от -5 до 5. Определить индекс строки с наибольшей суммой элементов.
+	//task №3 Create a 2-dimensional array of 7 rows and 4 columns. Fill in from -5 to 5.
+	//Determine the index of the row with the largest sum of elements.
 	int[][] getMultiArrayThree(){
-
 		int[][] multiArray = new int[7][4];
 		int[] temp = new int[multiArray.length];
 		int result = 0;
@@ -284,13 +260,11 @@ public class LaboratoryArrays {
 			}
 		}
 		System.out.println(result + " Индекс с максимальной суммой в массиве");
+
 		return multiArray;
 	}
-	//№4 Создать 2-мерный массив из 6 строк и 7 столбцов. Заполнить случайными числами от 0 до 9.
-	//Отсортировать
-
+	//№4 Create a 2-dimensional array of 6 rows and 7 columns. Fill in with random numbers from 0 to 9. Sort
 	void homeWorkFour_CreateAndSortArray() {
-
 		final int minValue = 10;
 		final int maxValue = 20;
 		final int numberOfRows = 4;
@@ -307,7 +281,6 @@ public class LaboratoryArrays {
 	}
 
 	int[][] creatArrayWithRandomValues(int numberOfRows, int numberOfColumns, int minValue, int maxValue){
-
 		int[][] returnValue = new int[numberOfRows][numberOfColumns];
 
 		for(int i = 0; i < returnValue.length; i++) {
@@ -326,9 +299,8 @@ public class LaboratoryArrays {
 
 		return randomValue;
 	}
-	//Сортировка одномерного массива
+	//Sorting a one-dimensional array
 	int[] sortOneLineArray(int[][] array) {
-
 		int[] oneLineArray = new int[array.length * array[0].length];
 		int temp = 0;
 		boolean flag = false;
@@ -341,9 +313,8 @@ public class LaboratoryArrays {
 
 		return oneLineArray;
 	}
-//Сортировка пузырьком
+	//Sorting by bubble
 	int[] bubbleSort(int[] array){
-
 		for(int i = array.length-1 ; i > 0 ; i--){
 			for(int j = 0 ; j < i ; j++){
 				if(array[j] < array[j+1]){
@@ -353,12 +324,11 @@ public class LaboratoryArrays {
 				}
 			}
 		}
+
 		return array;
 	}
-
-	//Перевод одномерного массива в двумерный
+	//Converting a one-dimensional array to a two-dimensional array
 	int[][] oneDimensionalToTwoDimensional(int[] array, int numberOfRows, int numberOfColumns){
-
 		if(array.length != (numberOfRows * numberOfColumns)) {
 			System.out.println("Fr");
 			throw new IndexOutOfBoundsException();	
@@ -375,7 +345,6 @@ public class LaboratoryArrays {
 	}
 
 	void printArray(int[] array) {
-
 		for(int i = 0; i < array.length; i++) {
 			System.out.print(array[i]+ "\t");		
 		}
@@ -383,7 +352,6 @@ public class LaboratoryArrays {
 	}
 
 	void printArray(int[][] array) {
-
 		for(int i = 0; i < array.length; i++) {
 			for(int j = 0; j < array[i].length; j++) {
 				System.out.print(array[i][j] + "\t");	
@@ -391,9 +359,8 @@ public class LaboratoryArrays {
 			System.out.println();
 		}
 	}
-	//№5 Создать таблицу умножения.
+	//№5 Create a multiplication table.
 	void multiplicationTable() {
-
 		for(int i = 1; i < 11; i++) {
 			for(int j = 1; j < 11; j++) {
 				System.out.println(i + " : " + j + " = " + i * j );

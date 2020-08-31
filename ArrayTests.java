@@ -8,19 +8,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-
-
 public class ArrayTests {
-	
+
 	LaboratoryArrays testArrays = new LaboratoryArrays();
-	//Тест числа Фибоначчи
+	//Test numbers of Fibanachi
 	@Test
 	void testGetFibanachi() {
 		int actual =  6765;
 		int expected = testArrays.getFibanachi();
 		assertEquals(expected, actual, "equals");
 	}
-	//Проверка на эксепшен
+	//Checking for excetion
 	@Test 
 	void testHomeWorkFour_CreateAndSortArray() {
 		try {
@@ -30,7 +28,7 @@ public class ArrayTests {
 			Assert.assertNotEquals("", e.getMessage());
 		}
 	}
-	//Аналогично, но другим способом проверка на эксепшен
+	//Checking for excetion. Another way
 	@Test
 	void testHomeWorkFour_CreateAndSortArrayTwo() throws Exception {
 		Exception exception = assertThrows(Exception.class,() -> {
@@ -38,8 +36,6 @@ public class ArrayTests {
 			throw new IndexOutOfBoundsException();
 		});
 		assertEquals(exception.getClass(), IndexOutOfBoundsException.class);
-	}
-	
-	
-	
+	}	
+
 }

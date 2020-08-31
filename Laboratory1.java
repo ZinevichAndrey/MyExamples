@@ -6,20 +6,15 @@ import java.text.DecimalFormat;
 public class Laboratory1 {
 
 	/*
-	 * 1. Обычное создание двух массивов
-	 * 2. Вывести два массива 
-	 * 3. Вывести цифры от 1 до 9 на экран в ввиде пирамиды
-	 * 4. Вычислить с помощью цикла передаваемое значение в квадрате 
-	 * 5.Программа расчёта факториала для произвольно числа n < 10; 
-	 * 6.Даны два действительных числа. Необходимо получить их сумму, разность, и произведение.Результат вывести на консоль.
-	 * 
-	 * 7.Определить время падения материального тела с заданной высоты. Вывести в консоль результат.
-	 * 8. Составить программу для нахождениея длины катета прямоугольного треугольника(Б), если известна длина гипотенузы (С), и катета(А). Результат вывести в консоль.
-	 * 
-	 * Лабораторная работа №4
-	 * 
-	 * 
-	 * 
+	 * 1. Normal creation of two arrays
+	 * 2. Display the two arrays
+	 * 3. Display numbers from 1 to 9 on the screen in a pyramid
+	 * 4. Use the loop to calculate the passed value squared
+	 * 5.Program for calculating the factorial for an arbitrary number n < 10;
+	 * 6.Two real numbers are given. You need to get their sum, difference, and product.Output the result to the console.
+	 * 7.Determine the time when a material body falls from a given height. Output the result to the console.
+	 * 8. Create a program to find the length of the cathet of a right triangle (B), if you know the length of the hypotenuse (C), and the cathet(A).
+	 * Output the result to the console.
 	 */
 
 	private String[] massEquation = {"a = 1", "c = a + 1", "m = 2", "n = 3", "Решение уравнений"}; 
@@ -27,7 +22,6 @@ public class Laboratory1 {
 	private int factorial = 1;
 	private BigInteger temporarily;
 	private BigInteger result = BigInteger.valueOf(1);
-
 
 	//№1 -2
 	void outputToTheConsolMass() {
@@ -39,7 +33,6 @@ public class Laboratory1 {
 			System.out.print(this.massFindingRoots[i] + "\t");
 		}
 	}
-
 	// №3
 	static void outputNumbers() {
 		for(int i = 1; i < 10; i++) {
@@ -49,7 +42,6 @@ public class Laboratory1 {
 			}
 		}
 	}
-
 	//№4
 	int squaring(int squaring) {
 		int result = 1;
@@ -57,11 +49,10 @@ public class Laboratory1 {
 			result += squaring;
 		}
 		System.out.println(this.result);
+
 		return result;
 	}
-
 	//№5
-
 	BigInteger factorial(int factorial){
 		this.result = BigInteger.valueOf(1);
 		if(factorial < 0 || factorial >= 1677) {
@@ -72,10 +63,9 @@ public class Laboratory1 {
 			this.result = result.multiply(this.temporarily);
 		}
 		System.out.println(this.result);
+
 		return this.result;
 	}
-
-
 	//№6
 	static void calculation(int first, int second) {
 		int sum =  first + second;
@@ -86,23 +76,23 @@ public class Laboratory1 {
 		System.out.println("Первое число:" + first + " Второе число:" + second);
 		System.out.print("Сумма двух чисел:" + sum +"\nРезультат вычитания:" + subtract + "\nРезультат перемножения:" + times + "\nРезультат деления:" + divided + "\nОстаток от деления:" + modulDivided);
 	}
-
 	// №7
 	public static double timeToFall(double height) {
 		final double accelerationOfGravity = 9.81;	
 		double temp = Math.abs(height);
 		double temporarily = (temp / accelerationOfGravity) * 2 ;
 		double result = Math.sqrt(temporarily);
+
 		return result;	
 	}
-
-	// Нахождение длины гипотенузы , если известны катеты(а,б).	
+	// Find the length of the hypotenuse when you know the other two sides(a,b)
 	//№8
 	public static double CalculationHipotenuse(double firstKatet, double secondKatet) {
 		double temp = (firstKatet * firstKatet) + (secondKatet * secondKatet);
 		double resultHipotenuse = Math.sqrt(temp);
 		DecimalFormat decimalFormat = new DecimalFormat("0.000");
 		System.out.println(decimalFormat.format(resultHipotenuse));
+
 		return resultHipotenuse;
 	}
 
