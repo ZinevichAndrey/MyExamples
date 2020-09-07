@@ -2,7 +2,7 @@ package git;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import java.math.BigInteger;
+import java.math.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -18,9 +18,10 @@ public class TestFibanachi {
 
 	@Test
 	void testGetFibanachiMinusOne() {
-		int numberForTest = -1;
-		int actual = 0;
-		BigInteger expected = Fibanachi.getFibanachi(numberForTest);
+		int numberForTest = 51;
+		String val = "12586269025";
+		BigInteger expected = new BigInteger(val);
+		BigInteger actual = Fibanachi.getFibanachi(numberForTest);
 		Assert.assertEquals("equals",expected, actual);
 	}
 

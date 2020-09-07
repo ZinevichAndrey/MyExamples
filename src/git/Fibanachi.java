@@ -9,15 +9,15 @@ public class Fibanachi {
 		BigInteger secondNomber = BigInteger.valueOf(1);
 
 		if(number <= 0) {
-			return result.valueOf(0);
+			return BigInteger.valueOf(0);
 		}
 		else if(number == 1) {
-			return result.valueOf(1);
+			return BigInteger.valueOf(1);
 		}
 		else if(number == 2) {
-			return result.valueOf(1);
+			return BigInteger.valueOf(1);
 		}
-		else if(number >= 46) {
+		else if(number >= 100) {
 			throw new ArithmeticException();
 		}
 		for(int i = 3; i <= number; i++) {
