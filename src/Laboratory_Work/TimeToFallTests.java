@@ -35,9 +35,9 @@ class TimeToFallTests {
 	@Test
 	void testTimeToFallMax() {
 		double distance = Double.MAX_VALUE;
-		double time = Laboratory1.timeToFall(distance);
+		double actual = Laboratory1.timeToFall(distance);
 		double expected = 6.053942254165036E153;	
-		assertEquals(expected, time, 0.0001, "Must be equal");		
+		assertEquals(expected, actual, 0.0001, "Must be equal");		
 	}
 	// Testing the factorial
 	@Test
