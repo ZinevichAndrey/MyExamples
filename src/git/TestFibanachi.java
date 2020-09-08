@@ -18,7 +18,7 @@ public class TestFibanachi {
 
 	@Test
 	void testGetFibanachiMinusOne() {
-		int numberForTest = 51;
+		int numberForTest = 50;
 		String val = "12586269025";
 		BigInteger expected = new BigInteger(val);
 		BigInteger actual = Fibanachi.getFibanachi(numberForTest);
@@ -70,7 +70,7 @@ public class TestFibanachi {
 	void testGetFibanachiHundred() {
 		try {
 			int numberForTest = 100;
-			BigInteger expected = Fibanachi.getFibanachi(numberForTest);
+			BigInteger throwException = Fibanachi.getFibanachi(numberForTest);
 		}
 		catch(ArithmeticException ae) {
 			Assert.assertNotEquals("", ae.getMessage());
@@ -81,7 +81,7 @@ public class TestFibanachi {
 	void testGetFibanachiIncorrect() throws Exception {
 		Exception exception = assertThrows(Exception.class, () -> {
 			int numberForTest = Integer.MAX_VALUE;
-			BigInteger expected = Fibanachi.getFibanachi(numberForTest);
+			BigInteger throwException = Fibanachi.getFibanachi(numberForTest);
 		});
 		assertEquals(exception.getClass(), ArithmeticException.class);	
 	}
