@@ -32,6 +32,9 @@ public class LaboratoryTwo_ConvertingNumbers {
 		if(number < 0) {
 			throw new ArithmeticException();
 		}
+		else if(number == 0) {
+			result = "0";
+		}
 		while(number > 0) {
 			binary = (short)(number % 8);
 			number /= 8;
@@ -48,7 +51,10 @@ public class LaboratoryTwo_ConvertingNumbers {
 		if(number < 0) {
 			throw new ArithmeticException();
 		}
-		while(number > 0) {
+		else if(number == 0) {
+			result = "0";
+		}
+		while(number >= 1) {
 			binary = (short)(number % 16);
 			number /= 16;
 			if(binary < 10) {
