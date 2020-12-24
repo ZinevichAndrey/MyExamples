@@ -65,6 +65,8 @@ public class CenterPanel implements ActionListener {
 		}
 		else if(e.getSource() == this.answerButton) {
 			int temp = Integer.parseInt(this.answerTextField.getText());
+			this.answerTextField.requestFocus();
+			this.answerTextField.selectAll();
 			if(this.guessTheNumber.getNumber() != temp) {
 				GuessTheNumber.increaseCount();
 				if(this.guessTheNumber.getNumber() < temp) {
@@ -79,6 +81,8 @@ public class CenterPanel implements ActionListener {
 			}
 		}
 	}
+
+
 
 
 
