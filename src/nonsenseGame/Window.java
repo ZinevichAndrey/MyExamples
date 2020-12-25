@@ -106,6 +106,7 @@ public class Window extends JFrame {
 		this.textAnswer.requestFocus();
 		this.textAnswer.selectAll();
 		this.labelInfo.setText("Выберите один из трёх квестов:");
+		// Найти решение проблемы раннего считывания текстового поля!!!
 		try {
 			this.answerQuest = Integer.parseInt(this.textAnswer.getText());
 		}
@@ -115,7 +116,7 @@ public class Window extends JFrame {
 	}
 
 	protected void choosingAQuest() {
-
+		
 		switch(this.answerQuest) {
 		case 1: 
 			this.labelInfo.setText(this.answerColor + " пони " + this.answerName + " только и делала что всё время " + this.answerAction);
