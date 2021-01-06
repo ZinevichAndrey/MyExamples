@@ -6,16 +6,12 @@ public class LessonOneMain {
 		// TODO Auto-generated method stub
 
 		LessonOne one = new LessonOne();
-		//	one.setArray();
-		//	one.evenNumbers();
-		//	one.oddNumbers();
-		//	one.numbersDivisibleByThreeOrNine();
-		//	one.numbersDivisibleByFiveAndSeven();
-		//	one.largestAndSmallestNumber();
-		//	one.bubbleSort();
-		//	one.primeNumbers();
-		//	one.sortNumbersByDescendingTheBubble();
-		//	System.out.println(LessonOne.getFibanachi(12).toString());
+		LuckyNumbers l = new LuckyNumbers();
+		l.fillTheArray();
+		
+		
+		
+		
 
 	}
 

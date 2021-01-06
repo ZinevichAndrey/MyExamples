@@ -9,11 +9,11 @@ class LessonOneTest {
 
 	@Test
 	void testFibanachi() {
-		BigInteger actual = LessonOne.getFibanachi(12);
+		BigInteger actual = GetFibanachi.getFibanachi(12);
 		BigInteger expected = BigInteger.valueOf(144);
 		assertEquals(expected, actual, "Equals");
 	}
-	
+
 	@Test
 	void testArrayFibanachi() {
 		int[][] numbersForTests = {
@@ -27,7 +27,7 @@ class LessonOneTest {
 			Assert.assertEquals("array length needs to be two", 2, temp.length);
 			int testNumber = temp[0];
 			int expectedNumber = temp[1];
-			BigInteger actualNumber = LessonOne.getFibanachi(testNumber);
+			BigInteger actualNumber = GetFibanachi.getFibanachi(testNumber);
 			Assert.assertEquals("equal numbers", expectedNumber, actualNumber);
 		}
 	}
