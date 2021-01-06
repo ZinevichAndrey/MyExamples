@@ -7,10 +7,11 @@ public class LessonOneMain {
 
 		LessonOne one = new LessonOne();
 		LuckyNumbers l = new LuckyNumbers();
-		l.fillTheArray();
-		
-		
-		
+		l.setup();
+		l.replicate(l.getArray(), 3);
+		l.show(l.result);
+		l.replicate(l.result, 7);
+		l.show(l.result);
 		
 
 	}
